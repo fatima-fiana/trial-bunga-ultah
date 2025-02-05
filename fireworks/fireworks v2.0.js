@@ -1232,12 +1232,6 @@ $(function () {
 			}
 		}
 
-		// supprise happy new year!
-		if (supprise && onHold == 10) {
-			supprise = false;
-			setTimeout(initText, 3000);
-		}
-
 		// update text logic
 		for (var i = listText.length - 1; i >= 0; i--) {
 			var text = listText[i];
@@ -1390,19 +1384,6 @@ $(function () {
 				light.y - light.radius,
 				light.radius * 2,
 				light.radius * 2
-			);
-		}
-
-		// supprise: HAPPY LUNAR NEW YEAR 2017!
-		for (var i = 0; i < listText.length; i++) {
-			var text = listText[i];
-			ctx.globalAlpha = text.alpha;
-			ctx.fillStyle = text.fill;
-			ctx.fillRect(
-				text.x - text.size,
-				text.y - text.size,
-				text.size * 2,
-				text.size * 2
 			);
 		}
 	}
