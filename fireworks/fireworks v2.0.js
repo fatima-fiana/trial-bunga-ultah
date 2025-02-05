@@ -549,21 +549,6 @@ $(function () {
 				if (fired % 33 == 0) {
 					initSpark();
 				}
-				// on hold
-				supprise = fired % 100 == 0 ? true : supprise;
-				if (supprise) {
-					fire.vx = 0;
-					fire.vy = 0;
-					fire.ax = 0;
-					fire.hold = true;
-					onHold++;
-				} else {
-					fire.vx = fire.base.vx;
-					fire.vy = fire.base.vy;
-					fire.ax = Math.random() * 0.06 - 0.03;
-					// play sound
-					playLaunchSound();
-				}
 			}
 			//
 			if (fire.hold && fire.delay <= 0) {
