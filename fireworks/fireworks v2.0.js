@@ -35,7 +35,6 @@ $(function () {
 		makePlanetCircleFirework,
 		makeFullCircleFirework,
 		makeDoubleCircleFirework,
-		makeHeartFirework,
 		makeCircleFirework,
 		makeRandomFirework
 	];
@@ -69,7 +68,7 @@ $(function () {
 	var listLaunchSound = $("audio.launch");
 
 	// define array position of text
-	var textString = "happynewyear2025";
+	var textString = "happybirthday!!!";
 	var textMatrix = [
 		4.5,
 		0,
@@ -1044,50 +1043,6 @@ $(function () {
 				vx: Math.cos(rad) * velocity * Math.random(),
 				vy: Math.sin(rad) * velocity * Math.random(),
 				ay: 0.06,
-				alpha: 1,
-				life: Math.round((Math.random() * range) / 2) + range / 1.5
-			};
-			firework.base = {
-				life: firework.life,
-				size: firework.size
-			};
-			listFirework.push(firework);
-		}
-		return color;
-	}
-
-	function makeHeartFirework(fire) {
-		var color = randColor();
-		var velocity = Math.random() * 3 + 3;
-		var max = fireNumber * 5;
-		var rotate = Math.random() * Math.PI * 2;
-		for (var i = 0; i < max; i++) {
-			var rad = (i * Math.PI * 2) / max + rotate;
-			var v, p;
-			if (rad - rotate < Math.PI * 0.5) {
-				p = (rad - rotate) / (Math.PI * 0.5);
-				v = velocity + velocity * p;
-			} else if (rad - rotate > Math.PI * 0.5 && rad - rotate < Math.PI) {
-				p = (rad - rotate - Math.PI * 0.5) / (Math.PI * 0.5);
-				v = velocity * (2 - p);
-			} else if (rad - rotate > Math.PI && rad - rotate < Math.PI * 1.5) {
-				p = (rad - rotate - Math.PI) / (Math.PI * 0.5);
-				v = velocity * (1 - p);
-			} else if (rad - rotate > Math.PI * 1.5 && rad - rotate < Math.PI * 2) {
-				p = (rad - rotate - Math.PI * 1.5) / (Math.PI * 0.5);
-				v = velocity * p;
-			} else {
-				v = velocity;
-			}
-			v = v + (Math.random() - 0.5) * 0.25;
-			var firework = {
-				x: fire.x,
-				y: fire.y,
-				size: Math.random() + 1.5,
-				fill: color,
-				vx: Math.cos(rad) * v,
-				vy: Math.sin(rad) * v,
-				ay: 0.02,
 				alpha: 1,
 				life: Math.round((Math.random() * range) / 2) + range / 1.5
 			};
