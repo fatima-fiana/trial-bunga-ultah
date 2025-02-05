@@ -1392,5 +1392,18 @@ $(function () {
 				light.radius * 2
 			);
 		}
+
+		// supprise: HAPPY LUNAR NEW YEAR 2017!
+		for (var i = 0; i < listText.length; i++) {
+			var text = listText[i];
+			ctx.globalAlpha = text.alpha;
+			ctx.fillStyle = text.fill;
+			ctx.fillRect(
+				text.x - text.size,
+				text.y - text.size,
+				text.size * 2,
+				text.size * 2
+			);
+		}
 	}
 });
