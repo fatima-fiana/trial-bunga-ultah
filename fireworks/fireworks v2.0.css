@@ -1,15 +1,12 @@
-body{
-    color: azure;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-}
 canvas {
 	display: block;
+	color: azure;
+	width: 100%;
+   	height: 100vh;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: center;
+    	background-color: black;
 }
 
 .block-audio {
